@@ -6,17 +6,17 @@
 <title>The Watergate Scandal</title>
 <style>
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
 
-/* Root colors */
+/* Colors and theme */
 :root {
-  --background: #f4f4f9;
+  --background: #f4f6f9;
   --foreground: #1a1a1a;
   --card-bg: #ffffff;
-  --card-border: #ddd;
-  --accent: #2c7be5;
-  --accent-hover: #1a5fb4;
-  --tabs-bg: #e0e0f0;
+  --card-border: #c5cbd6;
+  --accent: #0b3d91; /* navy */
+  --accent-hover: #062766;
+  --tabs-bg: #e3e8f3;
   --radius: 0.75rem;
 }
 
@@ -26,6 +26,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   line-height: 1.7;
+  margin: 0;
   padding: 2rem 1rem;
 }
 
@@ -33,15 +34,15 @@ h1 {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
   text-align: center;
-  margin-bottom: 0.3rem;
-  color: var(--foreground);
+  color: var(--accent);
+  margin-bottom: 0.2rem;
 }
 
 .subtitle {
   text-align: center;
   font-size: 1.2rem;
   color: #555;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 /* Tabs */
@@ -53,29 +54,29 @@ h1 {
   border-radius: var(--radius);
   padding: 0.25rem;
   margin-bottom: 2rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 .tabs-trigger {
   flex: 1;
   text-align: center;
-  padding: 0.6rem 1rem;
+  padding: 0.65rem 1.2rem;
   margin: 0.25rem;
   background: #ffffff;
-  color: #555;
-  border: 1px solid #ccc;
+  color: var(--accent);
+  border: 1px solid var(--card-border);
   cursor: pointer;
   border-radius: var(--radius);
-  font-weight: 500;
-  transition: all 0.2s;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  font-weight: 600;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 .tabs-trigger.active {
   background: var(--accent);
   color: #fff;
   border-color: var(--accent);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .tabs-trigger:hover {
@@ -98,33 +99,33 @@ h1 {
   color: var(--foreground);
   border-radius: var(--radius);
   border: 1px solid var(--card-border);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  margin-bottom: 1.5rem;
-  padding: 1.5rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+  margin-bottom: 1.75rem;
+  padding: 1.75rem;
   transition: transform 0.2s;
 }
 
 .card:hover { transform: translateY(-3px); }
-.card-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; }
-.card-description { font-size: 0.9rem; color: #777; margin-bottom: 0.5rem; }
-.card-content p { font-size: 1rem; margin-bottom: 1rem; line-height: 1.7; }
+.card-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--accent); }
+.card-description { font-size: 0.95rem; color: #555; margin-bottom: 0.5rem; }
+.card-content p { font-size: 1rem; margin-bottom: 1rem; line-height: 1.8; }
 
 /* Timeline */
 .timeline { position: relative; padding-left: 2rem; }
-.timeline-item { position: relative; padding-bottom: 1.5rem; border-left: 2px solid #ccc; }
+.timeline-item { position: relative; padding-bottom: 1.5rem; border-left: 2px solid #b0b7c8; }
 .timeline-item:last-child { border-left: none; padding-bottom: 0; }
 .timeline-item::before {
   content:'';
-  position:absolute; left:-0.35rem; top:0.25rem; width:0.6rem; height:0.6rem;
+  position:absolute; left:-0.35rem; top:0.25rem; width:0.65rem; height:0.65rem;
   border-radius:50%; background: var(--accent);
   border: 2px solid var(--background);
 }
-.timeline-date { display:inline-block; font-size:0.75rem; font-weight:600; background:#ddd; color:#222; padding:0.25rem 0.5rem; border-radius: calc(var(--radius)-2px); margin-bottom:0.5rem; margin-left:1rem; }
+.timeline-date { display:inline-block; font-size:0.75rem; font-weight:600; background:#cdd4e0; color:#1a1a1a; padding:0.25rem 0.5rem; border-radius: calc(var(--radius)-2px); margin-bottom:0.5rem; margin-left:1rem; }
 .timeline-event { font-size:0.875rem; color:#555; margin-left:1rem; }
 
-/* Bullet lists in Legacy */
+/* Bullet lists */
 .bullet-list { list-style-type: disc; margin-left: 1.5rem; margin-top: 1rem; }
-.bullet-list li { margin-bottom: 0.5rem; font-size: 1rem; }
+.bullet-list li { margin-bottom: 0.55rem; font-size: 1rem; }
 
 /* Card grid */
 .grid { display: grid; gap: 1.5rem; }
@@ -136,7 +137,7 @@ h1 {
 
 <div class="container">
 <h1>The Watergate Scandal</h1>
-<p class="subtitle">The Political Crisis That Changed America Forever</p>
+<p class="subtitle">The Political Crisis That Changed America</p>
 
 <!-- Tabs -->
 <div class="tabs-list">
@@ -156,6 +157,7 @@ h1 {
             <p>The Watergate scandal was a major political crisis in the United States during the early 1970s that ultimately led to the resignation of President Richard Nixon. It began with a break-in at the Democratic National Committee headquarters at the Watergate office complex in Washington, D.C., and evolved into a constitutional crisis involving abuse of power, obstruction of justice, and coverup at the highest levels of government.</p>
         </div>
     </div>
+
     <div class="card">
         <div class="card-title">The Break-In</div>
         <div class="card-description">June 17, 1972</div>
@@ -163,6 +165,7 @@ h1 {
             <p>On June 17, 1972, five men were arrested for breaking into the Democratic National Committee headquarters located in the Watergate complex. The burglars were caught attempting to wiretap phones and steal documents. Investigative journalism would soon reveal connections to President Nixon's reelection campaign.</p>
         </div>
     </div>
+
     <div class="card">
         <div class="card-title">The Smoking Gun Tape</div>
         <div class="card-content">
@@ -195,27 +198,27 @@ h1 {
 <!-- Key Figures Tab -->
 <div id="figures" class="tabs-content">
     <div class="grid grid-md-2 grid-lg-3">
-        <div class="card"><div class="card-title">Richard Nixon</div><div class="card-description">37th President of the United States</div><div class="card-content"><p>Resigned in disgrace on August 9, 1974, the only U.S. president to do so. His involvement in the coverup led to articles of impeachment being drafted against him.</p></div></div>
-        <div class="card"><div class="card-title">Bob Woodward & Carl Bernstein</div><div class="card-description">Washington Post Journalists</div><div class="card-content"><p>Their investigative reporting helped uncover the scandal and its coverup, becoming symbols of the power of a free press.</p></div></div>
-        <div class="card"><div class="card-title">John Dean</div><div class="card-description">White House Counsel</div><div class="card-content"><p>Became a key witness, testifying about Nixon's involvement in the coverup.</p></div></div>
-        <div class="card"><div class="card-title">Deep Throat (Mark Felt)</div><div class="card-description">FBI Associate Director</div><div class="card-content"><p>Anonymous FBI source who provided crucial information to journalists. Identity revealed in 2005.</p></div></div>
-        <div class="card"><div class="card-title">Archibald Cox</div><div class="card-description">Special Prosecutor</div><div class="card-content"><p>Fired in the "Saturday Night Massacre" after subpoenaing White House tapes.</p></div></div>
-        <div class="card"><div class="card-title">Sam Ervin</div><div class="card-description">Senate Committee Chairman</div><div class="card-content"><p>Chaired Senate Watergate Committee hearings, bringing the scandal into public attention.</p></div></div>
+        <div class="card"><div class="card-title">Richard Nixon</div><div class="card-description">37th President</div><div class="card-content"><p>Resigned in disgrace on August 9, 1974. His involvement in the coverup led to articles of impeachment being drafted against him.</p></div></div>
+        <div class="card"><div class="card-title">Bob Woodward & Carl Bernstein</div><div class="card-description">Washington Post Journalists</div><div class="card-content"><p>Investigative reporting helped uncover the scandal and its coverup, becoming symbols of the power of a free press.</p></div></div>
+        <div class="card"><div class="card-title">John Dean</div><div class="card-description">White House Counsel</div><div class="card-content"><p>Key witness testifying about Nixon's involvement in the coverup. Pivotal in revealing the extent of White House participation.</p></div></div>
+        <div class="card"><div class="card-title">Deep Throat (Mark Felt)</div><div class="card-description">FBI Associate Director</div><div class="card-content"><p>Anonymous source who provided crucial information to Woodward and Bernstein. Identity revealed in 2005.</p></div></div>
+        <div class="card"><div class="card-title">Archibald Cox</div><div class="card-description">Special Prosecutor</div><div class="card-content"><p>Appointed to investigate the scandal, fired in "Saturday Night Massacre".</p></div></div>
+        <div class="card"><div class="card-title">Sam Ervin</div><div class="card-description">Senate Committee Chairman</div><div class="card-content"><p>Chaired Senate Watergate Committee, televised hearings built public pressure.</p></div></div>
     </div>
 </div>
 
 <!-- Investigation Tab -->
 <div id="investigation" class="tabs-content">
-    <div class="card"><div class="card-title">The Investigation and Coverup</div><div class="card-content"><p>As investigations deepened, it became clear that senior officials in the Nixon administration had attempted to cover up the administration's involvement in the break-in. Nixon and his aides engaged in numerous illegal activities including obstruction of justice, abuse of power, and contempt of Congress. The revelation that Nixon had secretly recorded all conversations in the Oval Office became crucial evidence.</p></div></div>
-    <div class="card"><div class="card-title">The Constitutional Crisis</div><div class="card-content"><p>When Nixon refused to release the tape recordings, citing executive privilege, the case went to the Supreme Court, which unanimously ruled he must release the tapes. This established that the president is not above the law.</p></div></div>
-    <div class="card"><div class="card-title">The Resignation</div><div class="card-content"><p>Facing certain impeachment, Nixon resigned on August 8, 1974. Gerald Ford assumed the presidency and pardoned Nixon one month later.</p></div></div>
-    <div class="card"><div class="card-title">The Saturday Night Massacre</div><div class="card-content"><p>Nixon ordered the firing of Special Prosecutor Archibald Cox, which led to resignations and public outcry, intensifying impeachment efforts.</p></div></div>
+    <div class="card"><div class="card-title">The Investigation and Coverup</div><div class="card-content"><p>Senior officials attempted to cover up involvement in the break-in. Nixon and aides engaged in obstruction of justice, abuse of power, and contempt of Congress. The Oval Office tapes became crucial evidence.</p></div></div>
+    <div class="card"><div class="card-title">The Constitutional Crisis</div><div class="card-content"><p>Nixon refused to release tapes citing executive privilege. Supreme Court ruled he must release them in United States v. Nixon. House Judiciary Committee adopted articles of impeachment for obstruction, abuse of power, and contempt.</p></div></div>
+    <div class="card"><div class="card-title">The Resignation</div><div class="card-content"><p>Facing certain impeachment, Nixon resigned on August 8, 1974. Gerald Ford became President and pardoned him one month later.</p></div></div>
+    <div class="card"><div class="card-title">The Saturday Night Massacre</div><div class="card-content"><p>October 20, 1973: Nixon ordered firing of Special Prosecutor Cox. Attorney General Richardson resigned, Deputy AG Ruckelshaus fired, Solicitor General Bork executed order. Public outcry increased calls for impeachment.</p></div></div>
 </div>
 
 <!-- Legacy Tab -->
 <div id="legacy" class="tabs-content">
     <div class="card">
-        <div class="card-title">Legacy and Impact</div>
+        <div class="card-title">Legacy</div>
         <div class="card-content">
             <ul class="bullet-list">
                 <li>First and only resignation of a U.S. president</li>
@@ -235,10 +238,28 @@ h1 {
     <div class="card">
         <div class="card-title">Annotated Bibliography</div>
         <div class="card-content">
-            <p><strong>FBI. “Watergate.” FBI.gov, Federal Bureau of Investigation, www.fbi.gov/history/famous-cases/watergate. Accessed 18 Jan. 2026.</strong><br>This source is credible because it is published by the Federal Bureau of Investigation, a primary government agency responsible for investigating the Watergate break-in. It provides factual, first-hand information about the FBI’s investigation and the legal proceedings that followed. The content is reliable for understanding the official law-enforcement perspective on the scandal.</p>
+            <p><strong>FBI. “Watergate.” FBI.gov, Federal Bureau of Investigation, www.fbi.gov/history/famous-cases/watergate. Accessed 18 Jan. 2026.</strong><br>
+            This source is credible because it is published by the Federal Bureau of Investigation, a primary government agency responsible for investigating the Watergate break-in. It provides factual, first-hand information about the FBI’s investigation and the legal proceedings that followed. The content is reliable for understanding the official law-enforcement perspective on the scandal.</p>
 
-            <p><strong>“Watergate Scandal.” Encyclopædia Britannica, Encyclopædia Britannica, Inc., www.britannica.com/event/Watergate-Scandal. Accessed 18 Jan. 2026.</strong><br>This source is credible due to Encyclopædia Britannica’s editorial oversight and reputation as a scholarly reference. It offers a clear, well-organized historical overview of the Watergate scandal, including the timeline of events, key figures, and political implications. It is valuable for providing contextual background and accurate summaries of complex historical events.</p>
+            <p><strong>“Watergate Scandal.” Encyclopædia Britannica, Encyclopædia Britannica, Inc., www.britannica.com/event/Watergate-Scandal. Accessed 18 Jan. 2026.</strong><br>
+            This source is credible due to Encyclopædia Britannica’s editorial oversight and reputation as a scholarly reference. It offers a clear, well-organized historical overview of the Watergate scandal, including the timeline of events, key figures, and political implications. It is valuable for providing contextual background and accurate summaries of complex historical events.</p>
 
-            <p><strong>“Select Committee on Presidential Campaign Activities (Watergate Committee).” U.S. Senate, www.senate.gov/about/powers-procedures/investigations/watergate.htm. Accessed 18 Jan. 2026.</strong><br>Published on the official U.S. Senate website, this source is credible because it provides primary government documentation about congressional investigations. It details the formation, hearings, and constitutional implications of the Senate Watergate Committee, making it essential for understanding the legislative oversight and legal procedures of the scandal.</p>
+            <p><strong>“Select Committee on Presidential Campaign Activities (Watergate Committee).” U.S. Senate, www.senate.gov/about/powers-procedures/investigations/watergate.htm. Accessed 18 Jan. 2026.</strong><br>
+            Published on the official U.S. Senate website, this source is credible because it provides primary government documentation about congressional investigations. It details the formation, hearings, and constitutional implications of the Senate Watergate Committee, making it essential for understanding the legislative oversight and legal procedures of the scandal.</p>
 
-            <p><strong>“Watergate Scandal.” History.com, A&E Television Networks, www.history.com/articles/watergate. Accessed 18 Jan. 2026.</strong><br>This source is credible as it is produced by professional historians and editors at History.com. It provides a narrative overview of the Watergate break-in, Nixon’s obstruction of justice, and the investigative journalism that uncovered the scandal. The content is reliable for understanding the sequence of events and the broader impact on American political culture.</p>
+            <p><strong>“Watergate Scandal.” History.com, A&E Television Networks, www.history.com/articles/watergate. Accessed 18 Jan. 2026.</strong><br>
+            This source is credible as it is produced by professional historians and editors at History.com. It provides a narrative overview of the Watergate break-in, Nixon’s obstruction of justice, and the investigative journalism that uncovered the scandal. The content is reliable for understanding the sequence of events and the broader impact on American political culture.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+function switchTab(tabId){
+    document.querySelectorAll('.tabs-trigger').forEach(btn=>btn.classList.remove('active'));
+    document.querySelectorAll('.tabs-content').forEach(tab=>tab.classList.remove('active'));
+    document.getElementById(tabId).classList.add('active');
+    document.getElementById('tab-'+tabId).classList.add('active');
+}
+</script>
+</body>
+</html>
