@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Watergate Scandal</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0f172a;
+  color: #f8fafc;
+  font-family: Inter, sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.subtitle {
+  text-align: center;
+  color: #94a3b8;
+  margin-bottom: 2rem;
+}
+
+.tabs-list {
+  display: flex;
+  background: #1e293b;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.tabs-trigger {
+  flex: 1;
+  padding: 10px;
+  background: transparent;
+  color: #94a3b8;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.tabs-trigger:hover {
+  background: #334155;
+}
+
+.tabs-trigger.active {
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+.tabs-content {
+  display: none;
+}
+
+.tabs-content.active {
+  display: block;
+}
+
+.card {
+  background: #1e293b;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+p {
+  color: #cbd5f5;
+  line-height: 1.6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>The Watergate Scandal</h1>
+<p class="subtitle">The Political Crisis That Changed America Forever</p>
+
+<div class="tabs-list">
+  <button class="tabs-trigger active" onclick="switchTab('overview')" id="tab-overview">Overview</button>
+  <button class="tabs-trigger" onclick="switchTab('timeline')" id="tab-timeline">Timeline</button>
+  <button class="tabs-trigger" onclick="switchTab('figures')" id="tab-figures">Key Figures</button>
+  <button class="tabs-trigger" onclick="switchTab('legacy')" id="tab-legacy">Legacy</button>
+</div>
+
+<div id="overview" class="tabs-content active">
+  <div class="card">
+    <h3 class="card-title">What Was Watergate?</h3>
+    <p>The Watergate scandal was a political crisis that began with a break-in at the Democratic National Committee headquarters in 1972 and ended with President Richard Nixon’s resignation. It exposed corruption, abuse of power, and illegal actions by government officials.</p>
+  </div>
+</div>
+
+<div id="timeline" class="tabs-content">
+  <div class="card">
+    <h3 class="card-title">Timeline</h3>
+    <p>June 17, 1972 — Break-in at Watergate</p>
+    <p>October 1973 — Saturday Night Massacre</p>
+    <p>July 24, 1974 — Supreme Court orders tape release</p>
+    <p>August 9, 1974 — Nixon resigns</p>
+  </div>
+</div>
+
+<div id="figures" class="tabs-content">
+  <div class="card">
+    <h3 class="card-title">Key Figures</h3>
+    <p>Richard Nixon — 37th President of the United States</p>
+    <p>Bob Woodward & Carl Bernstein — Investigative journalists</p>
+    <p>John Dean — White House Counsel and key witness</p>
+  </div>
+</div>
+
+<div id="legacy" class="tabs-content">
+  <div class="card">
+    <h3 class="card-title">Legacy</h3>
+    <p>Watergate changed American politics by strengthening government oversight, increasing press freedom, and reinforcing the idea that no one is above the law.</p>
+  </div>
+</div>
+
+</div>
+
+<script>
+function switchTab(tabName) {
+
+  const tabs = document.querySelectorAll('.tabs-content');
+  tabs.forEach(tab => tab.classList.remove('active'));
+
+  const triggers = document.querySelectorAll('.tabs-trigger');
+  triggers.forEach(trigger => trigger.classList.remove('active'));
+
+  document.getElementById(tabName).classList.add('active');
+  document.getElementById('tab-' + tabName).classList.add('active');
+}
+</script>
+
+</body>
+</html>
