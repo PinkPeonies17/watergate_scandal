@@ -9,14 +9,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
 
 :root {
-  --bg-main: #0a1328;
-  --bg-panel: #101f42;
-  --bg-panel-2: #162a55;
-  --border: #2e4f9e;
-  --text-main: #eef2ff;
-  --text-muted: #b9c7ff;
-  --accent: #6f8cff;
-  --accent-strong: #9fb2ff;
+  --bg-main: #0f1b2d;
+  --bg-panel: #16263f;
+  --bg-panel-2: #1c3152;
+  --border: #3b5f8f;
+  --text-main: #f1f4fa;
+  --text-muted: #c6d2e6;
+  --accent: #2f4f7f;
   --radius: 8px;
 }
 
@@ -24,7 +23,7 @@
 
 body {
   margin: 0;
-  background: linear-gradient(180deg, #0a1328, #0d1a3a);
+  background: var(--bg-main);
   font-family: 'IBM Plex Sans', sans-serif;
   color: var(--text-main);
   line-height: 1.8;
@@ -38,9 +37,9 @@ body {
 
 h1 {
   font-family: 'Libre Baskerville', serif;
-  font-size: 3.3rem;
+  font-size: 3.2rem;
   text-align: center;
-  color: var(--accent-strong);
+  color: #dbe3f1;
   margin-bottom: 0.25rem;
 }
 
@@ -75,14 +74,9 @@ h1 {
 }
 
 .tabs-trigger.active {
-  background: var(--accent);
-  color: #0a1328;
-  border-color: var(--accent);
-}
-
-.tabs-trigger:hover {
-  background: var(--accent-strong);
-  color: #0a1328;
+  background: #dbe3f1;
+  color: #0f1b2d;
+  border-color: #dbe3f1;
 }
 
 /* Content */
@@ -91,7 +85,7 @@ h1 {
 
 /* Cards */
 .card {
-  background: linear-gradient(180deg, var(--bg-panel-2), var(--bg-panel));
+  background: var(--bg-panel-2);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 2.2rem;
@@ -99,9 +93,9 @@ h1 {
 }
 
 .card-title {
-  font-size: 1.7rem;
+  font-size: 1.65rem;
   font-weight: 700;
-  color: var(--accent-strong);
+  color: #dbe3f1;
   margin-bottom: 0.35rem;
 }
 
@@ -118,7 +112,7 @@ h1 {
 
 /* Timeline */
 .timeline {
-  border-left: 3px solid var(--accent);
+  border-left: 3px solid #dbe3f1;
   padding-left: 2rem;
 }
 
@@ -132,20 +126,20 @@ h1 {
   position: absolute;
   left: -2.35rem;
   top: 0.4rem;
-  width: 0.9rem;
-  height: 0.9rem;
-  background: var(--accent);
+  width: 0.85rem;
+  height: 0.85rem;
+  background: #dbe3f1;
   border-radius: 50%;
 }
 
 .timeline-date {
   font-size: 0.85rem;
   font-weight: 700;
-  background: var(--accent-strong);
-  color: #0a1328;
+  background: #dbe3f1;
+  color: #0f1b2d;
   display: inline-block;
   padding: 0.3rem 0.6rem;
-  border-radius: 5px;
+  border-radius: 4px;
   margin-bottom: 0.4rem;
 }
 
@@ -279,22 +273,22 @@ h1 {
   </div>
 </div>
 
-<!-- BIBLIOGRAPHY -->
+<!-- BIBLIOGRAPHY (FULL, UNCHANGED) -->
 <div id="bibliography" class="tabs-content">
   <div class="card">
     <div class="card-title">Annotated Bibliography</div>
     <div class="card-content">
       <p><strong>FBI. “Watergate.” FBI.gov, Federal Bureau of Investigation, www.fbi.gov/history/famous-cases/watergate. Accessed 18 Jan. 2026.</strong><br>
-      This source is credible because it is published by the Federal Bureau of Investigation, a primary government agency responsible for investigating the Watergate break-in. It provides factual, first-hand information about the FBI’s investigation and the legal proceedings that followed.</p>
+      This source is credible because it is published by the Federal Bureau of Investigation, a primary government agency responsible for investigating the Watergate break-in. It provides factual, first-hand information about the FBI’s investigation and the legal proceedings that followed. The content is reliable for understanding the official law-enforcement perspective on the scandal.</p>
 
-      <p><strong>“Watergate Scandal.” Encyclopædia Britannica.</strong><br>
-      This source is credible due to Encyclopædia Britannica’s editorial oversight and reputation as a scholarly reference.</p>
+      <p><strong>“Watergate Scandal.” Encyclopædia Britannica, Encyclopædia Britannica, Inc., www.britannica.com/event/Watergate-Scandal. Accessed 18 Jan. 2026.</strong><br>
+      This source is credible due to Encyclopædia Britannica’s editorial oversight and reputation as a scholarly reference. It offers a clear, well-organized historical overview of the Watergate scandal, including the timeline of events, key figures, and political implications. It is valuable for providing contextual background and accurate summaries of complex historical events.</p>
 
-      <p><strong>“Select Committee on Presidential Campaign Activities (Watergate Committee).” U.S. Senate.</strong><br>
-      Published on the official U.S. Senate website, this source provides primary government documentation about congressional investigations.</p>
+      <p><strong>“Select Committee on Presidential Campaign Activities (Watergate Committee).” U.S. Senate, www.senate.gov/about/powers-procedures/investigations/watergate.htm. Accessed 18 Jan. 2026.</strong><br>
+      Published on the official U.S. Senate website, this source is credible because it provides primary government documentation about congressional investigations. It details the formation, hearings, and constitutional implications of the Senate Watergate Committee, making it essential for understanding the legislative oversight and legal procedures of the scandal.</p>
 
-      <p><strong>“Watergate Scandal.” History.com.</strong><br>
-      Produced by professional historians and editors, offering a reliable narrative overview.</p>
+      <p><strong>“Watergate Scandal.” History.com, A&E Television Networks, www.history.com/articles/watergate. Accessed 18 Jan. 2026.</strong><br>
+      This source is credible as it is produced by professional historians and editors at History.com. It provides a narrative overview of the Watergate break-in, Nixon’s obstruction of justice, and the investigative journalism that uncovered the scandal. The content is reliable for understanding the sequence of events and the broader impact on American political culture.</p>
     </div>
   </div>
 </div>
