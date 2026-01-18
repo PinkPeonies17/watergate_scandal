@@ -1,19 +1,149 @@
-<div id="bibliography" class="tabs-content">
-    <div class="card">
-        <div class="card-title">Annotated Bibliography</div>
-        <div class="card-content">
-            <p><strong>FBI. “Watergate.”</strong> FBI.gov, Federal Bureau of Investigation, www.fbi.gov/history/famous-cases/watergate. Accessed 18 Jan. 2026.<br>
-            This source is credible because it is published by the Federal Bureau of Investigation, the agency that investigated Watergate. It provides first-hand, factual information about the break-in, arrests, and legal proceedings, making it reliable for understanding the official law-enforcement perspective.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Watergate Scandal</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-            <p><strong>“Watergate Scandal.”</strong> Encyclopædia Britannica, Encyclopædia Britannica, Inc., www.britannica.com/event/Watergate-Scandal. Accessed 18 Jan. 2026.<br>
-            This source is credible due to Britannica’s editorial oversight and reputation for accuracy. It offers a clear, organized historical summary of the scandal, including events, key figures, and political implications. Useful for background context and historical framing.</p>
+    :root {
+        --background: 222 47% 11%;
+        --foreground: 210 40% 98%;
+        --card: 217 33% 17%;
+        --muted: 217 33% 24%;
+        --muted-foreground: 215 20% 65%;
+        --accent: 217 33% 24%;
+        --border: 217 33% 24%;
+        --radius: 0.5rem;
+    }
 
-            <p><strong>“Select Committee on Presidential Campaign Activities (Watergate Committee).”</strong> U.S. Senate, www.senate.gov/about/powers-procedures/investigations/watergate.htm. Accessed 18 Jan. 2026.<br>
-            Credible because it is an official government source. It details the Senate’s investigative role, hearings, and constitutional considerations. Useful for understanding congressional oversight and legal procedures during Watergate.</p>
+    body {
+        font-family: 'Inter', sans-serif;
+        background: hsl(var(--background));
+        color: hsl(var(--foreground));
+        line-height: 1.6;
+    }
 
-            <p><strong>“Watergate Scandal.”</strong> A&E Television Networks, www.history.com/articles/watergate. Accessed 18 Jan. 2026.<br>
-            Credible due to professional historians and editors. Provides a narrative overview of the scandal, including break-in, cover-up, investigative journalism, and impact. Helpful for understanding the sequence of events and societal consequences.</p>
+    .container { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
+    h1 { text-align: center; font-size: 3rem; margin-bottom: 0.5rem; }
+    .subtitle { text-align: center; margin-bottom: 2rem; color: hsl(var(--muted-foreground)); }
+
+    .tabs-list {
+        display: flex; gap: 0.25rem; margin-bottom: 1.5rem;
+        background: hsl(var(--muted)); border-radius: var(--radius);
+    }
+
+    .tabs-trigger {
+        flex: 1; padding: 0.5rem; border: none; background: transparent;
+        cursor: pointer; color: hsl(var(--muted-foreground));
+        font-weight: 600;
+    }
+    .tabs-trigger.active { background: hsl(var(--background)); color: hsl(var(--foreground)); }
+    .tabs-trigger:hover { background: hsl(var(--accent)); color: hsl(var(--foreground)); }
+
+    .tabs-content { display: none; }
+    .tabs-content.active { display: block; }
+
+    .card {
+        background: hsl(var(--card)); border: 1px solid hsl(var(--border));
+        border-radius: var(--radius); margin-bottom: 1.5rem; padding: 1rem;
+    }
+    .card-title { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .card-description { font-size: 0.875rem; color: hsl(var(--muted-foreground)); }
+    .card-content p { margin-bottom: 1rem; color: hsl(var(--muted-foreground)); }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>The Watergate Scandal</h1>
+    <p class="subtitle">The Political Crisis That Changed America Forever</p>
+
+    <div class="tabs-list">
+        <button class="tabs-trigger active" onclick="switchTab('overview')" id="tab-overview">Overview</button>
+        <button class="tabs-trigger" onclick="switchTab('timeline')" id="tab-timeline">Timeline</button>
+        <button class="tabs-trigger" onclick="switchTab('figures')" id="tab-figures">Key Figures</button>
+        <button class="tabs-trigger" onclick="switchTab('investigation')" id="tab-investigation">Investigation</button>
+        <button class="tabs-trigger" onclick="switchTab('bibliography')" id="tab-bibliography">Bibliography</button>
+    </div>
+
+    <!-- Overview Tab -->
+    <div id="overview" class="tabs-content active">
+        <div class="card">
+            <div class="card-title">What Was Watergate?</div>
+            <div class="card-content">
+                <p>The Watergate scandal was a political crisis in the early 1970s that began with a break‑in at the Democratic National Committee headquarters and led to President Richard Nixon’s resignation. It revealed abuses of power, obstruction of justice, and cover‑up attempts at the highest levels of government.</p>
+            </div>
         </div>
     </div>
+
+    <!-- Timeline Tab -->
+    <div id="timeline" class="tabs-content">
+        <div class="card">
+            <div class="card-title">Timeline of Key Events</div>
+            <div class="card-content">
+                <p>June 17, 1972 — Watergate break‑in.</p>
+                <p>Oct. 1973 — "Saturday Night Massacre."</p>
+                <p>July 24, 1974 — Supreme Court orders release of tapes.</p>
+                <p>Aug. 9, 1974 — Nixon resigns.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Key Figures Tab -->
+    <div id="figures" class="tabs-content">
+        <div class="card">
+            <div class="card-title">Key Figures</div>
+            <div class="card-content">
+                <p>Richard Nixon — President who resigned due to Watergate cover‑up involvement.</p>
+                <p>Bob Woodward & Carl Bernstein — Journalists whose reporting exposed the scandal.</p>
+                <p>John Dean — White House Counsel who testified about the cover‑up.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Investigation Tab -->
+    <div id="investigation" class="tabs-content">
+        <div class="card">
+            <div class="card-title">Investigation & Legal Impact</div>
+            <div class="card-content">
+                <p>Congressional hearings, the Supreme Court ruling in United States v. Nixon, and media investigation uncovered the White House’s role in the break‑in and cover‑up, leading to Nixon’s resignation and reforms in campaign finance and executive oversight.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bibliography Tab -->
+    <div id="bibliography" class="tabs-content">
+        <div class="card">
+            <div class="card-title">Annotated Bibliography</div>
+            <div class="card-content">
+                <p><strong>FBI. “Watergate.”</strong> FBI.gov, Federal Bureau of Investigation, www.fbi.gov/history/famous-cases/watergate. Accessed 18 Jan. 2026.<br>
+                This source is credible because it is published by the Federal Bureau of Investigation, the agency that investigated Watergate. It provides first-hand, factual information about the break-in, arrests, and legal proceedings, making it reliable for understanding the official law-enforcement perspective.</p>
+
+                <p><strong>“Watergate Scandal.”</strong> Encyclopædia Britannica, Encyclopædia Britannica, Inc., www.britannica.com/event/Watergate-Scandal. Accessed 18 Jan. 2026.<br>
+                This source is credible due to Britannica’s editorial oversight and reputation for accuracy. It offers a clear, organized historical summary of the scandal, including events, key figures, and political implications. Useful for background context and historical framing.</p>
+
+                <p><strong>“Select Committee on Presidential Campaign Activities (Watergate Committee).”</strong> U.S. Senate, www.senate.gov/about/powers-procedures/investigations/watergate.htm. Accessed 18 Jan. 2026.<br>
+                Credible because it is an official government source. It details the Senate’s investigative role, hearings, and constitutional considerations. Useful for understanding congressional oversight and legal procedures during Watergate.</p>
+
+                <p><strong>“Watergate Scandal.”</strong> A&E Television Networks, www.history.com/articles/watergate. Accessed 18 Jan. 2026.<br>
+                Credible due to professional historians and editors. Provides a narrative overview of the scandal, including break-in, cover-up, investigative journalism, and impact. Helpful for understanding the sequence of events and societal consequences.</p>
+            </div>
+        </div>
+    </div>
+
 </div>
 
+<script>
+    function switchTab(tabName) {
+        const tabs = document.querySelectorAll('.tabs-content');
+        tabs.forEach(tab => tab.classList.remove('active'));
+        const triggers = document.querySelectorAll('.tabs-trigger');
+        triggers.forEach(trigger => trigger.classList.remove('active'));
+        document.getElementById(tabName).classList.add('active');
+        document.getElementById('tab-' + tabName).classList.add('active');
+    }
+</script>
+</body>
+</html>
