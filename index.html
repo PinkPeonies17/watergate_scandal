@@ -50,7 +50,7 @@ h1 {
   margin-bottom: 3rem;
 }
 
-/* Tabs */
+
 .tabs-list {
   display: flex;
   justify-content: center;
@@ -79,7 +79,7 @@ h1 {
   border-color: #dbe3f1;
 }
 
-/* Content */
+/* Tab content */
 .tabs-content { display: none; }
 .tabs-content.active { display: block; }
 
@@ -158,7 +158,28 @@ h1 {
   margin-bottom: 0.65rem;
 }
 
-/* Grid */
+
+.bib-entry {
+  background-color: #0d2238;
+  padding: 20px 24px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+
+.citation {
+  font-weight: 600;
+  padding-left: 1.25em;
+  text-indent: -1.25em; 
+  margin-bottom: 10px;
+}
+
+.annotation {
+  padding-left: 1.25em;
+  line-height: 1.7;
+  color: #d6e4f2;
+}
+
+
 .grid {
   display: grid;
   gap: 2rem;
@@ -171,6 +192,7 @@ h1 {
 @media (min-width: 1024px) {
   .grid-lg-3 { grid-template-columns: repeat(3, 1fr); }
 }
+
 </style>
 </head>
 
@@ -179,7 +201,6 @@ h1 {
 
 <h1>The Watergate Scandal</h1>
 <p class="subtitle">The Political Crisis That Changed America</p>
-
 <h2 style="text-align: center;">Sowmya Divakarla</h2>
 
 <div class="tabs-list">
@@ -191,7 +212,7 @@ h1 {
   <button class="tabs-trigger" id="tab-bibliography" onclick="switchTab('bibliography')">Bibliography</button>
 </div>
 
-
+  
 <div id="overview" class="tabs-content active">
   <div class="card">
     <div class="card-title">What Was Watergate?</div>
@@ -216,7 +237,7 @@ h1 {
   </div>
 </div>
 
-
+  
 <div id="timeline" class="tabs-content">
   <div class="card">
     <div class="card-title">Timeline of Key Events</div>
@@ -275,9 +296,8 @@ h1 {
   </div>
 </div>
 
-<!-- Bibliography Tab -->
-<div id="bibliography" class="tab-content">
 
+<div id="bibliography" class="tabs-content">
   <h2 class="section-title">Annotated Bibliography</h2>
 
   <div class="bib-entry">
@@ -315,9 +335,8 @@ h1 {
       This source describes the Senate Watergate Committee and the congressional investigation into the Nixon administration. This source is useful because it explains how Congress conducted hearings and enforced government oversight. This source is credible because it comes directly from the official U.S. Senate website and is based on government records.
     </p>
   </div>
- </div>
-</div>
 
+</div>
 
 </div>
 
@@ -331,3 +350,4 @@ function switchTab(tabId) {
 </script>
 </body>
 </html>
+
